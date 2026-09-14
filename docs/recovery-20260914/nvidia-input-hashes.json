@@ -1,0 +1,54 @@
+[
+  {
+    "path": "kernel-open/nvidia/nv-pci.c",
+    "sha256": "6de3c374335978b8fad18f2824bf76e7fb77a7765254a9f0d14c40178e2ade48"
+  },
+  {
+    "path": "kernel-open/nvidia/nv.c",
+    "sha256": "ee0cbdb62b55612e36746d18a4f135367e3ab3f8c4edbaf6ed250c0587128dc2"
+  },
+  {
+    "path": "src/nvidia/arch/nvalloc/unix/src/osinit.c",
+    "sha256": "76e553ca68fb69cd430230447dbf5ce16b6a283322fb1d2a7fdcd819088077f0"
+  },
+  {
+    "path": "src/nvidia/generated/g_kernel_gsp_nvoc.h",
+    "sha256": "a3b497bdca27feaa4ed5a2fa6876fc53cdc29e22dd794b14b91fdd70f003571b"
+  },
+  {
+    "path": "src/nvidia/inc/kernel/gpu/mem_mgr/mem_mgr.h",
+    "sha256": "8fa33c884e87621b2288b1334c9d28ee46a4c6effa01eb6169153a21622426e5"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/bus/arch/maxwell/kern_bus_gm107.c",
+    "sha256": "ab90273d658986e9fea5a1a693e23a1dbbfb921930056df0441cad82495c21be"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/gpu.c",
+    "sha256": "e492d5cabb52973bc230986dbe4f28ced195f385e5a091dbb658bec91e34126f"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/gpu_gspclient.c",
+    "sha256": "f3eac819a82707b00815a2a7c65774375a62c78345a6a7f5820196dc2acf1ae5"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/gsp/arch/turing/kernel_gsp_tu102.c",
+    "sha256": "a621bf1f51c96231c97308892498d33a957bd881efe4e66c2906ed2798871773"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c",
+    "sha256": "a0cc13bac92171837c132c251e46ac433592b688f4a3871ae12df666fa76cb00"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/mem_mgr/arch/turing/mem_mgr_tu102.c",
+    "sha256": "b84959c8a9e6d7da823738abcee08c1bbfa2d04328abada81fc49b8738525b82"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/mem_mgr/mem_mgr.c",
+    "sha256": "1c6d45cb751ed64a1a01879da6002828645fc7d81ffd1ed2b67b3b55aa335fb4"
+  },
+  {
+    "path": "src/nvidia/src/kernel/gpu/mem_mgr/mem_scrub.c",
+    "sha256": "b5413963f33ad3241d650887bbefb588febd899aa7dc89d2bd7c015f6fecc4ad"
+  }
+]

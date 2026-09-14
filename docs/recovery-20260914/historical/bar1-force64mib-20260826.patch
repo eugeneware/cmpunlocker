@@ -1,6 +1,6 @@
 --- a/kernel-open/nvidia/nv-pci.c
 +++ b/kernel-open/nvidia/nv-pci.c
-@@ -337,6 +337,53 @@
+@@ -337,6 +337,52 @@
  #endif
  }
  
@@ -33,8 +33,7 @@
 +        cya, cfg, cap);
 +
 +    writel(0x30,         pcfg + 0x724);
-+    /* Keep the physical aperture at the known-good 128 MB size. */
-+    writel(0x80000001,   pcfg + 0xDCC);
++    writel(0x8000000A,   pcfg + 0xDCC);
 +
 +    cya = readl(pcfg + 0x724);
 +    cfg = readl(pcfg + 0xDCC);
@@ -47,23 +46,37 @@
 +
 +    NVreg_EnableResizableBar = 1;
 +    nv_printf(NV_DBG_ERRORS,
-+        "NVRM: CMP BAR1: ReBAR enabled; aperture capped at 128 MB\n");
++        "NVRM: CMP BAR1: resize enabled, will attempt up to 64 GB\n");
 +#endif
 +}
 +
  static int nv_resize_pcie_bars(struct pci_dev *pci_dev) {
  #if defined(NV_PCI_REBAR_GET_POSSIBLE_SIZES_PRESENT)
      u16 cmd;
-@@ -367,2 +413,7 @@ static int nv_resize_pcie_bars(struct pci_dev *pci_dev) {
+@@ -363,12 +409,20 @@ static int nv_resize_pcie_bars(struct pci_dev *pci_dev) {
+         return 0;
+     }
+ 
 -    /* Try to resize the BAR to the largest supported size */
 -    requested_size = fls(sizes) - 1;
+-
+     /* Save the current size, just in case things go wrong */
+     old_size = pci_rebar_bytes_to_size(pci_resource_len(pci_dev, NV_GPU_BAR1));
+ 
 +    if (pci_dev->device == 0x20C2 || pci_dev->device == 0x2082) {
-+        requested_size = pci_rebar_bytes_to_size(128ULL << 20);
-+        nv_printf(NV_DBG_ERRORS, "NVRM: CMP BAR1: requesting capped 128 MB aperture\n");
++        /* GSP ROM access on CMP is reliable only with the stock 64 MiB aperture. */
++        requested_size = pci_rebar_bytes_to_size(64U * 1024U * 1024U);
++        nv_printf(NV_DBG_ERRORS,
++            "NVRM: CMP BAR1: forcing 64 MB aperture before GSP init\n");
 +    }
 +    else {
++        /* Try to resize the BAR to the largest supported size. */
 +        requested_size = fls(sizes) - 1;
 +    }
++
+     if (old_size == requested_size) {
+         nv_printf(NV_DBG_INFO, "NVRM: %04x:%02x:%02x.%x: BAR1 already at requested size.\n",
+             NV_PCI_DOMAIN_NUMBER(pci_dev), NV_PCI_BUS_NUMBER(pci_dev),
 @@ -2087,12 +2133,21 @@
          !nv_pci_validate_bars(pci_dev, /* only_bar0 = */ NV_FALSE))
          goto err_zero_dev;

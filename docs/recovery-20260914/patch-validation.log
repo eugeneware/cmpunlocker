@@ -1,0 +1,43 @@
+sec2-postbl-plm-ss-cfg.patch
+patching file src/nvidia/generated/g_kernel_gsp_nvoc.h
+patching file src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c
+
+booter-verify.patch
+patching file src/nvidia/src/kernel/gpu/gsp/arch/turing/kernel_gsp_tu102.c
+
+late-pma.patch
+patching file src/nvidia/arch/nvalloc/unix/src/osinit.c
+patching file src/nvidia/inc/kernel/gpu/mem_mgr/mem_mgr.h
+patching file src/nvidia/src/kernel/gpu/mem_mgr/mem_mgr.c
+
+bar0-pramin-clamp.patch
+patching file src/nvidia/src/kernel/gpu/bus/arch/maxwell/kern_bus_gm107.c
+
+ce-scrub-workarounds.patch
+patching file src/nvidia/src/kernel/gpu/mem_mgr/arch/turing/mem_mgr_tu102.c
+patching file src/nvidia/src/kernel/gpu/mem_mgr/mem_scrub.c
+
+persistent-sw-state.patch
+patching file kernel-open/nvidia/nv.c
+
+pcie-gen2.patch
+patching file src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c
+Hunk #1 succeeded at 4945 (offset 3 lines).
+patching file src/nvidia/src/kernel/gpu/gsp/arch/turing/kernel_gsp_tu102.c
+
+pcie-gen2-probe-retrain.patch
+patching file kernel-open/nvidia/nv.c
+
+name-string.patch
+patching file src/nvidia/src/kernel/gpu/gpu_gspclient.c
+Hunk #1 succeeded at 292 with fuzz 1.
+
+bar1-resize-unlock.patch
+patching file kernel-open/nvidia/nv-pci.c
+Hunk #2 succeeded at 410 (offset -4 lines).
+
+floorsweep-guard.patch
+patching file src/nvidia/src/kernel/gpu/gsp/kernel_gsp.c
+
+cmp-sku-mask.patch
+patching file src/nvidia/src/kernel/gpu/gpu.c

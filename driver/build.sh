@@ -249,6 +249,11 @@ if [[ -n "${resolved}" ]]; then
         warn "Resolved nvidia.ko is not under updates/cmpunlocker/"
     fi
 fi
+if [[ "${CMPUNLOCKER_SKIP_RELOAD:-0}" == "1" ]]; then
+    warn "Skipping live NVIDIA module reload (CMPUNLOCKER_SKIP_RELOAD=1)"
+    info "Patched modules are installed and will load on the next cold boot."
+    exit 0
+fi
 info "Attempting to unload NVIDIA modules..."
 systemctl stop nvidia-persistenced 2>/dev/null || true
 systemctl stop nvidia-fabricmanager 2>/dev/null || true

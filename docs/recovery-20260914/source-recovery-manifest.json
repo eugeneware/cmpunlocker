@@ -1,0 +1,177 @@
+[
+  {
+    "path": "verify.sh",
+    "sha256": "25aad49440362cb0b8ca453aaa73bfb6ab0cd5ba60c8599586f4005ae2008f03",
+    "mode": 509
+  },
+  {
+    "path": "CREDITS.md",
+    "sha256": "39acfd31bcd7d0a4529ffe1efc971420b7c79d69abf4a8370a081b2691defbb5",
+    "mode": 436
+  },
+  {
+    "path": ".gitignore",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "remove.sh",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "install.sh",
+    "sha256": "8ea5cc7b5e3c1857613597438af2d180cef08b755fbdab670d6e8e3edfab6475",
+    "mode": 509
+  },
+  {
+    "path": "LICENSE",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "README.md",
+    "sha256": "b331e66ce59e4d6580eddffc3500f2303dfddcaaaaf71b5607d2a403270aa4fb",
+    "mode": 436
+  },
+  {
+    "path": "docs/INSTALLATION.md",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "docs/CONTRIBUTING.md",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "docs/DEBUGGING.md",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": ".github/pull_request_template.md",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "common/constants.yaml",
+    "sha256": "12b7636f9f62fa0cc6183986b1440e3cf8580424ee1ed4cabc9622bc3ec9e45b",
+    "mode": 436
+  },
+  {
+    "path": "common/lib.sh",
+    "sha256": "86544d1924ee4f568f2f4d0148104ba84e206fa685545d8fe455c47828777523",
+    "mode": 436
+  },
+  {
+    "path": "systemd/gen2.service",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "tools/passthrough-arm.sh",
+    "sha256": "e03558f17bfd528a043e54fa08d4d5441281031114842337529814290e9e5845",
+    "mode": 509
+  },
+  {
+    "path": "tools/passthrough-setup.sh",
+    "sha256": "3cf83e64c1c1e8fcb1b3b82dc6560b914dc4f72e9c54ce8b509d2632fb6bc239",
+    "mode": 509
+  },
+  {
+    "path": "tools/read-constants.py",
+    "sha256": "84a48e80a84d3a7db3cde59cb0fb21708e6dd4239f875929779b7c1b6ffb0f09",
+    "mode": 509
+  },
+  {
+    "path": "tools/service.sh",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "tools/retrain.sh",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "tools/hammer.sh",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "tools/passthrough.sh",
+    "sha256": "8055764b212a92c2778fcaba2d91cdd98fe181f9f36aaa17931f78dc67f9140a",
+    "mode": 509
+  },
+  {
+    "path": "tools/gsp-restore.py",
+    "sha256": "f9cb7c5453be85c22aac7a235088c5fc48cb3da0c04699a005f74985925a30e5",
+    "mode": 509
+  },
+  {
+    "path": "tools/detect-variant.py",
+    "sha256": "aeab8fc48e48d777a01f1b38f2f25c84b36622e46d414c62ad7b8942b7185d1d",
+    "mode": 436
+  },
+  {
+    "path": "driver/build.sh",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "driver/VERSION",
+    "error": "[Errno 5] Input/output error"
+  },
+  {
+    "path": "driver/patches/floorsweep-guard.patch",
+    "sha256": "d71d02e776050c7f3365eb3f70ee5d0b8e71a6a8ed5988ccfd5b17bccf490263",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/pcie-gen2-probe-retrain.patch",
+    "sha256": "78477bd2ba525a6c44a2d2d1ee497876b44c91766a66afb1e61998b79e86feeb",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/ce-scrub-workarounds.patch",
+    "sha256": "aa25983be0eb7d1358d823e0fd4aa75d6125808ea3676a83bcafdef34c81a137",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/late-pma.patch",
+    "sha256": "8e45d523cd2f6a46f84eb476fe778502a96a4040a8e32398dd6e078800caafad",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/persistent-sw-state.patch",
+    "sha256": "fdd116149b314a107f44ac4895d8a5bdd84b7245a4aef5266660385e9fe2e2a3",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/cmp-sku-mask.patch",
+    "sha256": "217022fa94a9bc06480ec2f751040d7e5c128ba7c7a300be7e321619edea73fa",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/sec2-postbl-plm-ss-cfg.patch",
+    "sha256": "4a07be9f65cf6ce5a3b05b50ac6b3cc06295cd75e749a8bdd86eaebd42fb760d",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/bar1-resize-unlock.patch",
+    "sha256": "1b01eb1b1788840fb4dbc9bbc070a8f9c924f9d29ea20ab61d9b49f7e98ce8d8",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/booter-verify.patch",
+    "sha256": "4f67bee560daa9246478c153c2e128c86649931a45b1c8bfec586422aed24427",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/pcie-gen2.patch",
+    "sha256": "1973da3ef877f86f5cf8434c791e669326da1bd6f6bc65a61e3cb22a58ca4101",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/name-string.patch",
+    "sha256": "0b5fb92358b47c43eb6c8741170ae5ddd2b8fea9796af38b39cfa1703d39e094",
+    "mode": 436
+  },
+  {
+    "path": "driver/patches/bar0-pramin-clamp.patch",
+    "sha256": "684b7967c1a40ec246d80cd84542272d3648860bf498dbb9cb6fee332c5bb7e5",
+    "mode": 436
+  },
+  {
+    "walk_error": "[Errno 5] Input/output error: '/home/eugene/src/cmpunlocker/driver/passthrough'"
+  }
+]
