@@ -4,7 +4,28 @@ This branch preserves the unlocker customizations recovered before any power cyc
 following Dorothy's NVMe failure. It is based on upstream commit
 `76f0954fbb9864df0938f9c7bd9bfdc5bf2d6636` (Floorsweep guard being overprotective).
 The surviving on-disk `refs/heads/master` and the September 9 tool history both
-identify that base. The fork's existing `master` branch is unchanged.
+identify that base. The initial recovery was published on a separate branch;
+the verified recovery is now also published on the fork's `master`.
+
+## Fork alignment
+
+Before this recovery, the fork's `master` was at
+`f902c4416ac5b68fcc9700abe4b81a46919183c0`, an ancestor **16 upstream commits
+behind** Dorothy's base. Those 16 commits include the WPR2 reserved-memory fix,
+GPU profiling, passthrough support, and floorsweep changes. The recovery branch
+already includes that complete history as well as the two local customizations.
+Promotion to `master` is a fast-forward, preserving the existing fork history.
+
+On September 14, a fresh read of Dorothy's `refs/heads/master` again returned
+`76f0954fbb9864df0938f9c7bd9bfdc5bf2d6636`. The loaded NVIDIA module's
+`srcversion` was `B33D7C08666F586299BF97A`, matching the final 128 MiB module
+recorded in the September 9 tool evidence. Live installation metadata still
+reported driver `610.43.02` and profile `8gb`.
+
+Upstream's current `master`, `88e39ce67488796b2c6c716fe8f9b4e6e943a55e`, has
+12 further commits beyond Dorothy's base, including driver 615.71.09 support
+and changes to the floorsweep handling. They are outside this recovery: its
+target is the version used on Dorothy. Unreadable-file limitations below apply.
 
 ## Preserved customizations
 
